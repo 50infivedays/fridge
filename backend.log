@@ -1,0 +1,14 @@
+2025/05/22 23:51:51 Configuration loaded, using model: gemini-pro
+2025/05/22 23:51:51 Configuration initialized, using Gemini model: gemini-pro
+panic: http: multiple registrations for /record
+
+goroutine 1 [running]:
+net/http.(*serveMux121).handle(0x102701b30, {0x10240a5a2, 0x7}, {0x102521da8, 0x10251f9e0})
+	/opt/homebrew/Cellar/go/1.22.3/libexec/src/net/http/servemux121.go:59 +0x1f4
+net/http.(*serveMux121).handleFunc(...)
+	/opt/homebrew/Cellar/go/1.22.3/libexec/src/net/http/servemux121.go:96
+net/http.HandleFunc({0x10240a5a2?, 0x0?}, 0x2?)
+	/opt/homebrew/Cellar/go/1.22.3/libexec/src/net/http/server.go:2725 +0x58
+main.main()
+	/Users/wulei/Workspace/fridge/backend/main.go:23 +0x128
+exit status 2
